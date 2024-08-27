@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: '/order_history',
         loader: async () => {
-          const response = await fetch(`${import.meta.env.VITE_baseUrl}/api/marketplaces/orders/?${localStorage.getItem('uid')}`,{
+          const response = await fetch(`${import.meta.env.VITE_baseUrl}/api/marketplaces/orders/?user_id=${localStorage.getItem('uid')}`,{
             method: "GET",
             headers: {
               "Content-Type": "application/json",

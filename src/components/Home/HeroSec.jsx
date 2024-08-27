@@ -19,16 +19,16 @@ const HeroSec = () => {
               "Welcome to Mango Valley – Where Freshness Meets Flavor"Discover
               the Taste of Freshness""Explore the World of Exquisite Mangoes"
             </p>
-            {userType == "normal" ? (
-              <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white">
-                <Link to="/login">Get Started</Link>
-              </button>
-            ) : (
+            {userType == "admin" ? (
               <Link to="/dashboard">
                 <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white">
                   Go To Your Dashboard
                 </button>
               </Link>
+            ) : (
+              <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white">
+                <Link to="/login">Get Started</Link>
+              </button>
             )}
           </div>
         </div>
